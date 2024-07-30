@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="./index.css" rel="stylesheet">
+  <script src="./index.js" type="text/javascript" defer></script>
+  <!-- <script src="./event-propagation.js" type="text/javascript" defer></script> -->
+  <script src="./event-delegation.js" type="text/javascript" defer></script>
+  <!-- <script src="./this.js" type="text/javascript" defer></script> -->
+  <!-- <script src="./classes.js" type="text/javascript" defer></script> -->
+</head>
+<body>
+  <h2>
+    JS Practice
+  </h2>
+  <button class="this" onclick="alert(`${this}, ${this.tagName}`)">Button</button>
+
+  <div class="event propagation" id="grandparent">
+    <div class="event" id="parent">
+      <div class="event" id="child">Bubble or Capture?</div>
+    </div>
+  </div>
+
+  <div class="event delegation" id="container">
+    <div class="categories-header">Category<span id="create-new">+ New</span></div>
+    <ul id="categories">
+      <li id="laptops">Laptops <span class="delete">X</span></li>
+      <li id="phones">Phones <span class="delete">X</span></li>
+      <li id="headphones">Headphones <span class="delete">X</span></li>
+    </ul>
+  </div>
+
+</body>
+</html>
+

@@ -1,0 +1,41 @@
+body{
+  background-color: #222;
+  color: #e8e8e8;
+}
+
+
+button.this {
+  margin: 1em;
+  padding: 1em 2em;
+  background-color: #e8e8e8;
+  border-radius: 8Px;
+  border: none;
+}
+.event {
+  margin: 1em;
+  min-width: 4em;
+  max-width: 20em;
+  min-height: 4em;
+  padding: 2em;
+  border: 1px solid #353535;
+}
+
+.categories-header{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid #999999;
+}
+
+#categories {
+  margin: 1em 0;
+  padding: 0;
+
+  li {
+    margin: 0.5em 0;
+    min-width: 200px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
