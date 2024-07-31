@@ -32,7 +32,7 @@ function Student(name, age, grade) {
 Student.prototype = Object.create(Person.prototype);
 
 // If you don't set Student.prototype.constructor to Student,
-// it will take the prototype.constructor of Shape (parent).
+// it will take the prototype.constructor of Person (parent).
 // To avoid that, we set the prototype.constructor to Student (child).
 
 // Set the constructor property to refer to Student

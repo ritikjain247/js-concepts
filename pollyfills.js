@@ -272,3 +272,27 @@ function throttle(func, wait = 0) {
 //     }, wait)
 //   }
 // }
+
+
+
+
+/**
+ * @param {Array} iterable
+ * @return {Promise}
+ */
+Promise.prototype.myRace = function (iterable) {
+  return new Promise((resolve, reject) => {
+    if (iterable.length === 0) {
+      return;
+    }
+
+    iterable.forEach(async (item) => {
+      try {
+        const result = await item;
+        resolve(result);
+      } catch (err) {
+        reject(err);
+      }
+    });
+  });
+}
