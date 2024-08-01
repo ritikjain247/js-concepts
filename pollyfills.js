@@ -296,3 +296,22 @@ Promise.prototype.myRace = function (iterable) {
     });
   });
 }
+
+
+/**
+ * @template T
+ * @param {...(T | Array<T>)} items
+ * @return {Array<T>}
+ */
+Array.prototype.myConcat = function (...items) {
+  const result = [...this];
+
+  items.forEach(item => {
+    if (Array.isArray(item)) {
+      result.push(...item);
+    } else {
+      result.push(item);
+    }
+  });
+  return result;
+};
