@@ -1,10 +1,11 @@
 body{
   background-color: #222;
   color: #e8e8e8;
+  font-family: sans-serif;
 }
 
 
-button.this {
+button {
   margin: 1em;
   padding: 1em 2em;
   background-color: #e8e8e8;
@@ -39,3 +40,10 @@ button.this {
   }
 }
 
+.web-worker {
+  margin: 1em;
+
+  #result {
+    margin: 1em;
+  }
+}

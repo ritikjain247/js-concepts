@@ -6,22 +6,24 @@
   <title>Document</title>
   <link href="./index.css" rel="stylesheet">
   <script src="./index.js" type="text/javascript" defer></script>
-  <!-- <script src="./event-propagation.js" type="text/javascript" defer></script> -->
+  <script src="./event-propagation.js" type="text/javascript" defer></script>
   <script src="./event-delegation.js" type="text/javascript" defer></script>
-  <!-- <script src="./this.js" type="text/javascript" defer></script> -->
-  <!-- <script src="./classes.js" type="text/javascript" defer></script> -->
+  <!-- <script src="./this.js" type="text/javascript" defer></script>
+  <script src="./classes.js" type="text/javascript" defer></script> -->
+  <script src="./web-worker-setup.js" type="text/javascript" defer></script>
+  <script src="./service-worker.js" type="text/javascript" defer></script>
 </head>
 <body>
   <h2>
     JS Practice
   </h2>
-  <button class="this" onclick="alert(`${this}, ${this.tagName}`)">Button</button>
-
   <div class="event propagation" id="grandparent">
     <div class="event" id="parent">
       <div class="event" id="child">Bubble or Capture?</div>
     </div>
   </div>
+
+  <button class="this" onclick="alert(`${this}, ${this.tagName}`)">This Button</button>
 
   <div class="event delegation" id="container">
     <div class="categories-header">Category<span id="create-new">+ New</span></div>
@@ -30,6 +32,20 @@
       <li id="phones">Phones <span class="delete">X</span></li>
       <li id="headphones">Headphones <span class="delete">X</span></li>
     </ul>
+  </div>
+
+  <div class="web-worker">
+    <h2>Web Worker Example</h2>
+    <div id="result">Result: </div>
+    <button id="startWorker">Start Worker</button>
+  </div>
+
+  <div class="service-worker">
+    <h2>Service Worker</h2>
+    <div id="logs">
+      <h3>Service Worker Logs:</h3>
+      <ul id="log-list"></ul>
+    </div>
   </div>
 
 </body>

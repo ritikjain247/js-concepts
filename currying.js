@@ -78,7 +78,7 @@ function partial(fn, ...args) {
 
 
 // A function to convert any f(a, b, c) into f(a)(b)(c)
-function curry(func) {
+function curryAny(func) {
   return function curriedFunc(...args) {
     if (func.length <= args.length) {
       return func(...args);
@@ -89,4 +89,21 @@ function curry(func) {
       }
     }
   }
+}
+
+/**
+ * @param {Function} func
+ * @return {Function}
+ */
+function curry(func) {
+  return function curried(...args) {
+    if (args.length >= func.length) {
+      return func.apply(this, args);
+    }
+
+    return (arg) =>
+      arg === undefined
+        ? curried.apply(this, args)
+        : curried.apply(this, [...args, arg]);
+  };
 }
