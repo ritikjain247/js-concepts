@@ -315,3 +315,19 @@ Array.prototype.myConcat = function (...items) {
   });
   return result;
 };
+
+
+
+
+function groupBy(array, iteratee) {
+  const result = {};
+  for (let item of array) {
+    const key = iteratee(item);
+    console.log(item, key, result);
+    if (!result[key]) result[key] = [item];
+    else result[key].push(item);
+    // result[key] = [...((result[key] || []).push(item))];
+  }
+  return result;
+}
+console.log(groupBy([6.1, 4.2, 6.3], Math.floor));
