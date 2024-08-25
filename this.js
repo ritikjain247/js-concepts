@@ -30,9 +30,9 @@ obj.x();
 const obj2 = {
   a: 10,
   x: function () {
-    console.log('obj2 x', this); // obj4
+    console.log('obj2 x', this); // obj2
     const y = () => {
-      console.log('obj2 y', this); // obj4
+      console.log('obj2 y', this); // obj2
     };
     y();
   },

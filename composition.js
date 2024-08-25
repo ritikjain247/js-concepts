@@ -2,7 +2,7 @@
 
 // Function composition is the pointwise application of one function to the result of another. 
 
-
+// Right to left
 // Single argument
 function compose(...fns) {
   return function (x) {
